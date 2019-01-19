@@ -1,0 +1,7 @@
+name = "json-cBuilder"
+uuid = "73dad7c8-1c0a-11e9-2724-55ea18021bcd"
+authors = ["YuK_Ota <whitenightwinter@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+BinaryBuilder = "12aac903-9f7c-5d81-afc2-d9565ea332ae"
