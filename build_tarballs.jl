@@ -19,7 +19,7 @@ cd json-c/
 mkdir build
 cd build/
 cmake .. -DCMAKE_INSTALL_PREFIX=$prefix -DCMAKE_TOOLCHAIN_FILE=/opt/$target/$target.toolchain
-make
+make -j${nproc}
 make install
 exit
 
@@ -28,7 +28,9 @@ exit
 # These are the platforms we will build for by default, unless further
 # platforms are passed in on the command line
 platforms = [
-    Linux(:x86_64, libc=:glibc)
+    Linux(:x86_64, libc=:musl),
+    Linux(:x86_64, libc=:glibc),
+    Linux(:i686, libc=:glibc)
 ]
 
 # The products that we will ensure are always built
